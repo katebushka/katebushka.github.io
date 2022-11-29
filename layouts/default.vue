@@ -1,3 +1,7 @@
+<script>
+import "assets/css/tailwind.css"
+</script>
+
 <template>
   <div>
     <Navbar />
@@ -213,7 +217,3 @@ body {
     }
 }
 </style>
-
-<script setup>
-
-</script>
