@@ -1,10 +1,10 @@
 <template>
-  
-  <Navbar />
-  <slot></slot>
+  <div>
+    <Navbar />
+    <slot></slot>
 
-  <TheFooter />
-
+    <TheFooter />
+  </div>
 </template>
 
 <style>

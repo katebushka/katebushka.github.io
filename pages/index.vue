@@ -5,6 +5,7 @@
 </script>
 
 <template>
+    <div>
   <section class="md:space-x-16 space-x-1 py-10 flex justify-center">
     <div class="md:p-5 p-2">
         <div class="left-border-one transition ease-in-out delay-100 flex left-border-two">
@@ -64,4 +65,5 @@
         </div>
     </div>
   </section>
+</div>
 </template>
