@@ -7,7 +7,7 @@
 
 <template>
   <div class="mx-auto md:w-2/4 space-y-16">
-    <h1 class="focus-in-contract-bck md:my-24 my-16 md:text-4xl text-xl">Projects.</h1>
+    <h1 class="tracking-in-contract-bck md:my-24 my-16 md:text-4xl text-xl">Projects.</h1>
     <div>
       <p>Landing page. Practice course. Car shop.</p>
       <div class="mt-2">
@@ -44,22 +44,5 @@
 </template>
 
 <style>
-.focus-in-contract-bck {
-  animation: focus-in-contract-bck 2s cubic-bezier(.25, .46, .45, .94) both
-}
 
-@keyframes focus-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    transform: translateZ(300px);
-    filter: blur(12px);
-    opacity: 0
-  }
-
-  100% {
-    transform: translateZ(12px);
-    filter: blur(0);
-    opacity: 1
-  }
-}
 </style>

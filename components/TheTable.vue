@@ -7,7 +7,7 @@
                     Front-end
                 </th>
                 <th scope="col" class="py-3 px-6"> 
-                    Back-end
+                    Java Script
                 </th>
                 <th scope="col" class="py-3 px-6 bg-neutral-600 ">
                     Tools
@@ -17,10 +17,10 @@
         <tbody>
             <tr class="border-b border-neutral-400 ">
                 <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap bg-neutral-600 ">
-                    Html 5
+                    Html 5, Adaptive layout
                 </th>
                 <td class="py-4 px-6">
-                    Java Script
+                    Nuxt
                 </td>
                 <td class="py-4 px-6 bg-neutral-600 ">
                     Figma
@@ -39,21 +39,21 @@
             </tr>
             <tr class="border-b border-neutral-400 ">
                 <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap bg-neutral-600 ">
-                    Tailwind
+                    Tailwind, Bootstrap
                 </th>
                 <td class="py-4 px-6">
                     Node JS 
                 </td>
                 <td class="py-4 px-6 bg-neutral-600 ">
-                    Adapt.layout
+                    WordPress
                 </td>
             </tr>
             <tr class="border-b border-neutral-400 ">
                 <th scope="row" class="py-4 px-6 font-medium text-white whitespace-nowrap bg-neutral-600 ">
-                    Bootstrap
+                    -
                 </th>
                 <td class="py-4 px-6">
-                    WordPress
+                    -
                 </td>
                 <td class="py-4 px-6 bg-neutral-600 ">
                     Linux
