@@ -1,5 +1,12 @@
-<script>
-import "assets/css/tailwind.css"
+<script setup>
+useHead({
+  script: [
+    {
+      src: 'https://cdn.tailwindcss.com',
+      body: true
+    }
+  ]
+})
 </script>
 
 <template>
