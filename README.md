@@ -42,6 +42,18 @@ npm run preview
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 
+**package.json**
+
+  "devDependencies": {
+    <!-- "@nuxt/postcss8": "^1.1.3", -->
+    <!-- "@nuxtjs/tailwindcss": "^6.1.3", -->
+    <!-- "autoprefixer": "^10.4.13", -->
+    "nuxt": "3.0.0",
+    <!-- "postcss": "^8.4.19", -->
+    <!-- "tailwindcss": "^3.2.4" -->
+    }
+   *Подключена ссылка cdn на tailwind в /layouts*
+
 
 
 

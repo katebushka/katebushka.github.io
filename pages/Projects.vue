@@ -11,7 +11,7 @@
     <div>
       <p>Landing page. Practice course. Car shop.</p>
       <div class="mt-2">
-        <NuxtLink target="_blank" to="https://github.com/KateBushka/tw-project-hr.git">
+        <NuxtLink target="_blank" to="#">
           <img class="saturate-0 hover:filter-none" src="~/assets/images/project-2.png" alt="project-2">
         </NuxtLink>
       </div>
@@ -19,23 +19,23 @@
     <div>
       <p>Landing page. Practice course. Ectronics store.</p>
       <div class="mt-2">
-        <NuxtLink to="https://github.com/KateBushka/tw-project-hr.git" target="_blank">
+        <NuxtLink to="#" target="_blank">
           <img class="saturate-0 hover:filter-none" src="~/assets/images/project-3-1.png" alt="project-3">
         </NuxtLink>
       </div>
     </div>
     <div>
-      <p>Landing page. Practice course. HR services.</p>
+      <p>Project for HR services. Used during development: tailwind, flowbite, git, docker</p>
       <div class="mt-2">
-        <NuxtLink target="_blank" to="https://github.com/KateBushka/tw-project-hr.git">
+        <NuxtLink target="_blank" to="#">
           <img class="saturate-0 hover:filter-none" src="~/assets/images/hr-project.png" alt="hr-project">
         </NuxtLink>
       </div>
     </div>
     <div>
-      <p>Practice course. Booking services.</p>
+      <p>Project for booking service.Bootstrap was used.</p>
       <div class="mt-2">
-        <NuxtLink to="https://github.com/KateBushka/tw-project-hr.git" target="_blank">
+        <NuxtLink to="https://booking.emtza.ru/" target="_blank">
           <img class="saturate-0 hover:filter-none" src="~/assets/images/book-project.png" alt="booking-project">
         </NuxtLink>
       </div>

@@ -20,7 +20,7 @@
                     Html 5, Adaptive layout
                 </th>
                 <td class="py-4 px-6">
-                    Nuxt
+                    Nuxt js
                 </td>
                 <td class="py-4 px-6 bg-neutral-600 ">
                     Figma
@@ -31,10 +31,10 @@
                     CSS 3
                 </th>
                 <td class="py-4 px-6">
-                    Vue
+                    Vue js
                 </td>
                 <td class="py-4 px-6 bg-neutral-600">
-                    Git
+                    GitHub
                 </td>
             </tr>
             <tr class="border-b border-neutral-400 ">
