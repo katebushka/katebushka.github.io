@@ -19,28 +19,31 @@ useHead({
 </template>
 
 <style>
-:root {
+/* Скрываем Scrollbar */
+body {
+	scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar { 
+	display: none; /* Safari and Chrome */
+}
+
+ body {
+  margin: 0;
+	padding: 0;
+	color: #fff;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.05em;
-
-  color: rgba(255, 255, 255, 0.87);
+  text-align: center;
   background-color: #000000;
-
+  height: 100%;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-body {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
 }
 
 .tracking-in-contract-bck {
