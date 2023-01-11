@@ -54,7 +54,3 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
     }
    *Подключена ссылка cdn на tailwind в /layouts*
 
-
-
-
-

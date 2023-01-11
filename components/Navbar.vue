@@ -1,6 +1,6 @@
 <template>
-<nav class="container flex flex-wrap md:justify-center justify-between items-center mx-auto">
-    <NuxtLink to="/home" class="flex items-center">
+<nav class="container flex flex-wrap md:justify-center justify-between items-center mx-auto md:px-0 px-5">
+    <NuxtLink to="/" class="flex items-center">
       <img src="~/assets/images/logo.png" class="hover:scale-150 hover:duration-1000 mr-3 h-9 sm:h-14" alt="Logo">
     </NuxtLink>
     <button @click="showMenu" type="button" class="navbar-default inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden focus:outline-none" aria-controls="navbar-default" aria-expanded="false">

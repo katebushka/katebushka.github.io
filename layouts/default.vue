@@ -10,11 +10,15 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <div class="">
     <Navbar />
+   
+   <div class=" ">
     <slot></slot>
-
-    <TheFooter />
+   </div> 
+    <div class="">
+      <TheFooter />
+    </div>
   </div>
 </template>
 
@@ -39,11 +43,11 @@ body::-webkit-scrollbar {
   text-align: center;
   background-color: #000000;
   height: 100%;
-  font-synthesis: none;
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; */
 }
 
 .tracking-in-contract-bck {

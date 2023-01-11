@@ -6,8 +6,10 @@
 
 
 <template>
-  <div class="mx-auto md:w-2/4 space-y-16">
-    <h1 class="tracking-in-contract-bck md:my-24 my-16 md:text-4xl text-xl">Projects.</h1>
+  <Animepage />
+  <!-- <div class="mx-auto lg:w-2/4 md:w-2/3 md:px-0 px-5 py-16 h-full">
+    <h1 class="tracking-in-contract-bck pb-16 md:text-4xl text-xl">Projects.</h1>
+    <div class="space-y-16">
     <div>
       <p>Desktop chat. Used CSS, JS</p>
       <div class="mt-2">
@@ -51,12 +53,13 @@
     <div>
       <p>Project real estate service. Used during development: Tailwind, Nuxt 3, JS, API</p>
       <div class="mt-2">
-        <NuxtLink target="_blank" to="housedes.ru">
+        <NuxtLink target="_blank" to="https://housedes.ru">
           <img class="saturate-0 hover:filter-none" src="~/assets/images/project-estate.png" alt="estate-project">
         </NuxtLink>
       </div>
     </div>
   </div>
+  </div> -->
 </template>
 
 <style>
