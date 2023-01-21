@@ -10,16 +10,13 @@ useHead({
 </script>
 
 <template>
-  <div class="">
-    <Navbar />
-   
-   <div class=" ">
-    <slot></slot>
+   <div class="content">
+      <Navbar />
+      <slot></slot>
    </div> 
-    <div class="">
+    <div class="footer">
       <TheFooter />
     </div>
-  </div>
 </template>
 
 <style>
@@ -32,8 +29,8 @@ body::-webkit-scrollbar {
 }
 
  body {
-  margin: 0;
-	padding: 0;
+  /* margin: 0;
+	padding: 0; */
 	color: #fff;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
@@ -43,12 +40,15 @@ body::-webkit-scrollbar {
   text-align: center;
   background-color: #000000;
   height: 100%;
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%; */
 }
+.content {
+  min-height: 100%;
+  padding-bottom: 50px;
+  }
+  .footer {
+  height: 40px;
+  margin-top: -40px;
+  }
 
 .tracking-in-contract-bck {
   animation: tracking-in-contract-bck 2s cubic-bezier(.215, .61, .355, 1.000) both

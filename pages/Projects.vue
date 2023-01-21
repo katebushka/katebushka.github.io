@@ -6,8 +6,7 @@
 
 
 <template>
-  <Animepage />
-  <!-- <div class="mx-auto lg:w-2/4 md:w-2/3 md:px-0 px-5 py-16 h-full">
+  <div class="mx-auto lg:w-2/4 md:w-2/3 md:px-0 px-5 py-16 h-full">
     <h1 class="tracking-in-contract-bck pb-16 md:text-4xl text-xl">Projects.</h1>
     <div class="space-y-16">
     <div>
@@ -59,7 +58,7 @@
       </div>
     </div>
   </div>
-  </div> -->
+  </div>
 </template>
 
 <style>
