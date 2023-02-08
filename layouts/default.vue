@@ -1,60 +1,259 @@
 <script setup>
 useHead({
-  script: [
+  // script: [
+  //   {
+  //     body: true
+  //   }
+  // ],
+  link: [
     {
-      src: 'https://cdn.tailwindcss.com',
-      body: true
-    }
-  ]
+    href: "https://fonts.googleapis.com/css2?family=Orbitron&display=swap",
+    rel: "stylesheet"
+  },
+  {
+    href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap",
+    rel: "stylesheet"
+
+  }
+]
+
 })
 </script>
 
 <template>
-   <div class="content">
-      <Navbar />
+    <div class="bg-pink">
+    <div class="container navbar">
+            <div class="logo">
+                MY PROFILE
+            </div>
+            <button href="" type="button" id="btn" class="btn-burger" aria-expanded="false">
+                <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="mobile-menu" id="navbar-default">
+                <div class="menu">
+                    <NuxtLink to="#about">About</NuxtLink>
+                    <NuxtLink to="#project">Projects</NuxtLink>
+                    <NuxtLink to="#contact">Contact</NuxtLink>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <h1>front-end developer</h1>
+        </div>
+
+    </div>
       <slot></slot>
-   </div> 
     <div class="footer">
-      <TheFooter />
+      <!-- <TheFooter /> -->
     </div>
 </template>
 
 <style>
-/* Скрываем Scrollbar */
+* {
+  margin: 0;
+}
+
+:root {
+  --font-roboto: 'Roboto Mono', monospace;
+  --font-palatino: 'Orbitron', sans-serif;
+  --color-pink: #F2DCE4;
+  --color-blue: #013A4C;
+}
+
 body {
-	scrollbar-width: none; /* Firefox */
-}
-body::-webkit-scrollbar { 
-	display: none; /* Safari and Chrome */
-}
-
- body {
-  /* margin: 0;
-	padding: 0; */
-	color: #fff;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  scrollbar-width: none;
+  /* Firefox */
+  line-height: 30px;
+  letter-spacing: 3px;
+  word-spacing: 10px;
   text-align: center;
-  background-color: #000000;
   height: 100%;
-}
-.content {
-  min-height: 100%;
-  padding-bottom: 50px;
-  }
-  .footer {
-  height: 40px;
-  margin-top: -40px;
-  }
-
-.tracking-in-contract-bck {
-  animation: tracking-in-contract-bck 2s cubic-bezier(.215, .61, .355, 1.000) both
+  font-family: var(--font-roboto);
 }
 
-@keyframes tracking-in-contract-bck {
+body::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  font-family: var(--font-palatino);
+  color: #FFD063;
+}
+
+.container {
+  margin: 0 auto;
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn-burger {
+    background: var(--color-pink);
+    border: none;
+    display: inline-flex;
+  }
+
+  .btn-burger svg {
+    width: 24px;
+    fill: var(--color-blue);
+  }
+
+  .mobile-menu {
+    position: relative;
+    display: none;
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 12px;
+    background-color: var(--color-pink);
+  }
+  .menu a {
+  margin-right: 0;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .btn-burger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    width: auto;
+  }
+
+  .menu {
+    font-size: 16px;
+    position: relative;
+  }
+  .menu a {
+  margin-right: 0.5rem;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 700px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .menu {
+    font-size: 20px;
+  }
+  .menu a {
+  margin-right: 1rem;
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+
+  h1 {
+    font-size: 66px;
+  }
+  .menu a {
+  margin-right: 3rem;
+}
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.navbar {
+  font-family: var(--font-palatino);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  margin-top: -6rem;
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+  color: var(--color-blue);
+  padding: 8rem 0;
+  width: 100%;
+
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+  color: var(--color-pink);
+  padding: 8rem 0;
+  width: 100%;
+
+}
+.menu a:hover {
+  color: #FFD063;
+}
+.hero {
+  background-image: url('https://img.freepik.com/free-photo/diverse-hands-touching-white-paper-mockup-pink-wallpaper_53876-96147.jpg?w=1060&t=st=1675783765~exp=1675784365~hmac=2c254c7fdd74415f1c4f6329ed7add60ca2d8af491f8700126f22f941f7e74d5');
+  background-size: cover;
+  height: 600px;
+  background-position: center;
+  position: relative;
+
+}
+
+.tracking {
+  animation: tracking 2s cubic-bezier(.215, .61, .355, 1.000) both;
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+@keyframes tracking {
   0% {
     letter-spacing: 1em;
     transform: translateZ(400px);
@@ -70,164 +269,60 @@ body::-webkit-scrollbar {
     opacity: 1
   }
 }
-/* Contact */
-.backInRight {
-  animation: 3s linear 250ms backwards running backInRight;
+
+.item {
+  padding: 20px 0;
 }
 
-@keyframes backInRight {
-  0% {
-    transform: translateX(2000px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  80% {
-    transform: translateX(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.item a {
+  margin: 10px;
+}
+  
+.item svg {
+  width: 40px;
+  fill: var(--color-pink);
+  border-radius: 50%;
 }
 
-.backInLeft {
-  animation: 3s linear 250ms backwards alternate backInLeft;
-}
-@keyframes backInLeft {
-  0% {
-    transform: translateX(-2000px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  80% {
-    transform: translateX(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.item svg:hover {
+  fill: var(--color-blue);
+  background: var(--color-pink);
 }
 
-.bounceInUp {
-  animation: 3s linear bounceInUp;
-}
-@keyframes bounceInUp {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  from {
-    opacity: 0;
-    transform: translate3d(0, 3000px, 0) scaleY(5);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(0, -20px, 0) scaleY(0.9);
-  }
-
-  75% {
-    transform: translate3d(0, 10px, 0) scaleY(0.95);
-  }
-
-  90% {
-    transform: translate3d(0, -5px, 0) scaleY(0.985);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+.btn-email {
+  border: 1px solid var(--color-pink);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-.backInUp {
-  animation: 3s linear backwards running backInUp;
-}
-@keyframes backInUp {
-  0% {
-    transform: translateY(1200px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  80% {
-    transform: translateY(0px) scale(0.7);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.btn-email:hover {
+  color: var(--color-blue);
+  background-color: var(--color-pink);
 }
 
-/* Home */
-.roll-in-left {
-    animation: roll-in-left 2s ease-out both
-}
-@keyframes roll-in-left {
-    0% {
-        transform: translateX(-800px) rotate(-540deg);
-        opacity: 0
-    }
+.text {
+  padding: 50px 0;
+  color: #FFD063;
+  font-size: 22px;
+  line-height: 50px;
 
-    100% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1
-    }
 }
 
-.jello-vertical {
-  animation: jello-vertical 2s 4s both
+.project img {
+  width: 100%;
+  filter: blur(10px);
 }
-@keyframes jello-vertical {
-  0% {
-    transform: scale3d(1, 1, 1)
-  }
-
-  30% {
-    transform: scale3d(.75, 1.25, 1)
-  }
-
-  40% {
-    transform: scale3d(1.25, .75, 1)
-  }
-
-  50% {
-    transform: scale3d(.85, 1.15, 1)
-  }
-
-  65% {
-    transform: scale3d(1.05, .95, 1)
-  }
-
-  75% {
-    transform: scale3d(.95, 1.05, 1)
-  }
-
-  100% {
-    transform: scale3d(1, 1, 1)
-  }
+.project img:hover {
+  filter: drop-shadow(16px 16px 20px #FFD063);
+}
+.project p {
+  padding: 30px 0;
 }
 
-.roll-in-right {
-    animation: roll-in-right 2s ease-out 2s both
+.bg-about {
+  background-image: url('/assets/images/pngegg.png');
+  background-position: center;
+  height: 300px;
 }
-@keyframes roll-in-right {
-    0% {
-        transform: translateX(800px) rotate(540deg);
-        opacity: 0
-    }
 
-    100% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 1
-    }
-}
 </style>
