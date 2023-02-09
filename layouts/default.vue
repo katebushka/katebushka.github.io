@@ -7,56 +7,49 @@ useHead({
   // ],
   link: [
     {
-    href: "https://fonts.googleapis.com/css2?family=Orbitron&display=swap",
-    rel: "stylesheet"
-  },
-  {
-    href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap",
-    rel: "stylesheet"
+      href: "https://fonts.googleapis.com/css2?family=Orbitron&display=swap",
+      rel: "stylesheet"
+    },
+    {
+      href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap",
+      rel: "stylesheet"
 
-  }
-]
+    }
+  ]
 
 })
 </script>
 
 <template>
-    <div class="bg-pink">
-    <div class="container navbar">
-            <div class="logo">
-                MY PROFILE
-            </div>
-            <button href="" type="button" id="btn" class="btn-burger" aria-expanded="false">
-                <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-            <div class="mobile-menu" id="navbar-default">
-                <div class="menu">
-                    <NuxtLink to="#about">About</NuxtLink>
-                    <NuxtLink to="#project">Projects</NuxtLink>
-                    <NuxtLink to="#contact">Contact</NuxtLink>
-                </div>
-            </div>
-        </div>
-        <div class="hero">
-            <h1>front-end developer</h1>
-        </div>
 
-    </div>
-      <slot></slot>
-    <div class="footer">
-      <!-- <TheFooter /> -->
-    </div>
+<div class="bg-pink padding-down">
+
+  <nav class="container">
+  <input type="checkbox" id="btn-menu" />
+  <label for="btn-menu"></label>
+
+  <ul class="list-menu">
+    <li><NuxtLink to="#about">About</NuxtLink></li>
+    <li><NuxtLink to="#project">Projects</NuxtLink></li>
+    <li><NuxtLink to="#contact">Contact</NuxtLink></li>
+  </ul>
+</nav>
+    <div class="hero">
+      <h1>front-end developer</h1>
+
+  </div>
+
+  </div>
+  <slot></slot>
+  <div class="footer">
+    <!-- <TheFooter /> -->
+  </div>
 </template>
 
 <style>
 * {
   margin: 0;
 }
-
 :root {
   --font-roboto: 'Roboto Mono', monospace;
   --font-palatino: 'Orbitron', sans-serif;
@@ -85,120 +78,138 @@ a {
   color: currentColor;
 }
 
+nav {
+  font-family: var(--font-palatino);
+  font-weight: 700;
+  padding: 2rem;
+}
+.list-menu{
+  display: flex;
+  list-style: none;
+}
+.list-menu > li > a{
+  color: var(--color-blue);
+  display: block;
+  padding: 5px 15px;
+}
+.list-menu > li > a:hover{
+  color: #FFD063;
+}
+
+#btn-menu{
+  display: none;
+}
+#btn-menu + label{
+  display: none; 
+  position: relative;
+  height: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+#btn-menu + label:before{
+  content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM4ODg4ODgiIGQ9Ik0zIDE4di0yaDE4djJabTAtNXYtMmgxOHYyWm0wLTVWNmgxOHYyWiIvPjwvc3ZnPg==');  
+  display: inline-block;
+  font-size: 22px;
+}
+#btn-menu:checked + label:before{
+  content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM4ODg4ODgiIGQ9Ik02LjQgMTlMNSAxNy42bDUuNi01LjZMNSA2LjRMNi40IDVsNS42IDUuNkwxNy42IDVMMTkgNi40TDEzLjQgMTJsNS42IDUuNmwtMS40IDEuNGwtNS42LTUuNloiLz48L3N2Zz4=');
+  color: #FFD063;
+}
+
 h1 {
   position: absolute;
-  top: 50%;
-  left: 25%;
+  top: 47%;
   font-family: var(--font-palatino);
   color: #FFD063;
 }
 
 .container {
   margin: 0 auto;
-
+  /* width: 100%; */
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .container {
-    padding: 0 10px;
+    max-width: 550px;
+  }
+
+  #btn-menu + label{
+      display: inline-block;
+   }
+  #btn-menu + label + .list-menu{
+    display: none;
+  }
+  #btn-menu:checked + label + .list-menu{
+    display: block;
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 24px;
+    left: 8%;
   }
 
-  .btn-burger {
-    background: var(--color-pink);
-    border: none;
-    display: inline-flex;
-  }
-
-  .btn-burger svg {
-    width: 24px;
-    fill: var(--color-blue);
-  }
-
-  .mobile-menu {
-    position: relative;
-    display: none;
+  .project img {
     width: 100%;
+    filter: drop-shadow(16px 16px 20px #FFD063);
   }
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    font-size: 12px;
-    background-color: var(--color-pink);
+  .text {
+    padding: 50px 0;
+    color: #FFD063;
+    font-size: 22px;
+    line-height: 30px;
   }
-  .menu a {
-  margin-right: 0;
-}
 
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .container {
-    width: 500px;
+    max-width: 500px;
   }
 
   h1 {
     font-size: 30px;
+  left: 25%;
+
   }
 
-  .btn-burger {
-    display: none;
+  .project img {
+    width: 100%;
+    filter: blur(5px);
   }
 
-  .mobile-menu {
-    display: block;
-    width: auto;
+  .project img:hover {
+    filter: drop-shadow(16px 16px 20px #FFD063);
   }
 
-  .menu {
-    font-size: 16px;
-    position: relative;
+  .text {
+    padding: 50px 0;
+    color: #FFD063;
+    font-size: 22px;
+    line-height: 50px;
   }
-  .menu a {
-  margin-right: 0.5rem;
 }
 
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .container {
-    width: 700px;
+    max-width: 700px;
   }
 
   h1 {
     font-size: 50px;
   }
-
-  .menu {
-    font-size: 20px;
-  }
-  .menu a {
-  margin-right: 1rem;
-}
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .container {
-    width: 1000px;
+    max-width: 1000px;
   }
 
   h1 {
     font-size: 66px;
   }
-  .menu a {
-  margin-right: 3rem;
-}
+
 }
 
 .logo {
@@ -209,35 +220,24 @@ h1 {
 .logo img {
   width: 50px;
 }
-
-.navbar {
-  font-family: var(--font-palatino);
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 2rem;
-  margin-top: -6rem;
+.padding-up {
+  padding-top: 8rem;
 }
-
+.padding-down {
+  padding-bottom: 8rem;
+}
 .bg-pink {
   background-color: var(--color-pink);
   color: var(--color-blue);
-  padding: 8rem 0;
   width: 100%;
-
 }
 
 .bg-blue {
   background-color: var(--color-blue);
   color: var(--color-pink);
-  padding: 8rem 0;
   width: 100%;
+}
 
-}
-.menu a:hover {
-  color: #FFD063;
-}
 .hero {
   background-image: url('https://img.freepik.com/free-photo/diverse-hands-touching-white-paper-mockup-pink-wallpaper_53876-96147.jpg?w=1060&t=st=1675783765~exp=1675784365~hmac=2c254c7fdd74415f1c4f6329ed7add60ca2d8af491f8700126f22f941f7e74d5');
   background-size: cover;
@@ -277,7 +277,7 @@ h1 {
 .item a {
   margin: 10px;
 }
-  
+
 .item svg {
   width: 40px;
   fill: var(--color-pink);
@@ -300,29 +300,26 @@ h1 {
   background-color: var(--color-pink);
 }
 
-.text {
-  padding: 50px 0;
-  color: #FFD063;
-  font-size: 22px;
-  line-height: 50px;
-
-}
-
-.project img {
-  width: 100%;
-  filter: blur(10px);
-}
-.project img:hover {
-  filter: drop-shadow(16px 16px 20px #FFD063);
-}
 .project p {
   padding: 30px 0;
 }
-
+/* .project {
+  columns: 2;
+} */
+/* .project-box {
+  display: flex;
+  flex-direction: row-reverse;
+} */
+/* .project-box img {
+  position: relative;
+}
+.project-box p {
+  position: absolute;
+  z-index: 100;
+} */
 .bg-about {
   background-image: url('/assets/images/pngegg.png');
   background-position: center;
   height: 300px;
 }
-
 </style>

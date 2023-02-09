@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="bg-blue">
+    <div class="bg-blue padding-up padding-down">
         <div class="container">
             <div class="tracking" id="about">About.</div>
             <div class="text bg-about">
@@ -15,12 +15,12 @@
             </div>
         </div>
     </div>
-    <div class="bg-pink">
+    <div class="bg-pink padding-up padding-down">
         <div class="container">
             <div class="tracking" id="project">Project.</div>
             <div class="project">
                 <div>  
-                    <div>
+                    <div class="project-box">
                       <p>Desktop chat. Used CSS, JS</p>
                       <div>
                         <NuxtLink target="_blank" to="#">
@@ -28,7 +28,7 @@
                         </NuxtLink>
                       </div>
                     </div>
-                    <div>
+                    <div class="project-box">
                       <p>Electronics store landing page. Practice course.  Used CSS</p>
                       <div>
                         <NuxtLink to="#" target="_blank">
@@ -82,7 +82,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-blue">
+    <div class="bg-blue padding-up padding-down">
         <div class="container">
             <div class="tracking" id="contact">Contact.</div>
             <div class="text">
