@@ -1,10 +1,5 @@
 <script setup>
 useHead({
-  // script: [
-  //   {
-  //     body: true
-  //   }
-  // ],
   link: [
     {
       href: "https://fonts.googleapis.com/css2?family=Orbitron&display=swap",
@@ -16,47 +11,122 @@ useHead({
 
     }
   ]
-
 })
+onMounted(function(){
+
+  function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+
+let elements = document.querySelectorAll('.tracking'); 
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
+let text = document.querySelectorAll('.text');
+for (let txt of text) {
+  observer.observe(txt);
+}
+
+let getCss = document.querySelectorAll('.css');
+for (let css of getCss) {
+  observer.observe(css);
+}
+let getHtml = document.querySelectorAll('.html');
+for (let html of getHtml) {
+  observer.observe(html);
+}
+let getJs = document.querySelectorAll('.js');
+for (let js of getJs) {
+  observer.observe(js);
+}
+let getVue = document.querySelectorAll('.vue');
+for (let vue of getVue) {
+  observer.observe(vue);
+}
+
+
+const myButton = document.getElementById("btn");
+
+window.onscroll = function () {
+  if (window.pageYOffset >= 800) {
+    myButton.style.display = "block";
+  } else {
+    myButton.style.display = "none";
+  }
+};
+
+myButton.onclick = function () {
+  window.scrollTo(0, 0);
+};
+
+});
+
 </script>
 
 <template>
 
 <div class="bg-pink padding-down">
 
-  <nav class="container">
+  <nav class="container menu">
+  <div class="logo">Kate Bush</div>
+
   <input type="checkbox" id="btn-menu" />
   <label for="btn-menu"></label>
-
   <ul class="list-menu">
     <li><NuxtLink to="#about">About</NuxtLink></li>
+    <li><NuxtLink to="#skills">Skills</NuxtLink></li>
     <li><NuxtLink to="#project">Projects</NuxtLink></li>
     <li><NuxtLink to="#contact">Contact</NuxtLink></li>
   </ul>
 </nav>
     <div class="hero">
-      <h1>front-end developer</h1>
+      <h1 class="hero-title">front-end developer</h1>
 
   </div>
 
   </div>
   <slot></slot>
+  <div id="btn" class="arrow-up">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#888888" d="M11.293 4.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1-1.414 1.414L12 6.414l-5.293 5.293a1 1 0 0 1-1.414-1.414l6-6zM12 12.414l-5.293 5.293a1 1 0 0 1-1.414-1.414l6-6a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1-1.414 1.414L12 12.414z"/></svg>
+  </div>
   <div class="footer">
     <!-- <TheFooter /> -->
   </div>
 </template>
 
 <style>
+.arrow-up, #btn{
+  font-size: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;  
+  display: none;
+}
+
+/* .arrow-up:hover {
+  color:#FFD063;
+  cursor: pointer;
+} */
 * {
   margin: 0;
 }
 :root {
   --font-roboto: 'Roboto Mono', monospace;
   --font-palatino: 'Orbitron', sans-serif;
-  --color-pink: #F2DCE4;
-  --color-blue: #013A4C;
+  --color-pink: rgb(242, 220, 228);
+  --color-blue: rgb(1, 58, 76);
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   scrollbar-width: none;
   /* Firefox */
@@ -83,6 +153,16 @@ nav {
   font-weight: 700;
   padding: 2rem;
 }
+
+.logo {
+  font-size: 26px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .list-menu{
   display: flex;
   list-style: none;
@@ -91,9 +171,12 @@ nav {
   color: var(--color-blue);
   display: block;
   padding: 5px 15px;
+  text-align: right;
 }
 .list-menu > li > a:hover{
   color: #FFD063;
+  transition: 500ms;
+  text-shadow: 1px 1px 2px var(--color-blue);
 }
 
 #btn-menu{
@@ -116,15 +199,15 @@ nav {
   color: #FFD063;
 }
 
-h1 {
-  position: absolute;
-  top: 47%;
+.hero-title {
+  text-align: center;
   font-family: var(--font-palatino);
   color: #FFD063;
 }
-
 .container {
   margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
   /* width: 100%; */
 }
 
@@ -155,11 +238,12 @@ h1 {
   }
 
   .text {
-    padding: 50px 0;
-    color: #FFD063;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1em;
+  line-height: 1em;
   }
+  .project {
+  columns: 1;
+}
 
 }
 
@@ -174,20 +258,21 @@ h1 {
 
   }
 
+  .project {
+  columns: 2;
+}
   .project img {
     width: 100%;
-    filter: blur(5px);
-  }
-
-  .project img:hover {
     filter: drop-shadow(16px 16px 20px #FFD063);
   }
 
+  .project img:hover {
+    filter: blur(5px);
+  }
+
   .text {
-    padding: 50px 0;
-    color: #FFD063;
-    font-size: 22px;
-    line-height: 50px;
+    font-size: 1.5em;
+  line-height: 1.5em;
   }
 }
 
@@ -241,35 +326,22 @@ h1 {
 .hero {
   background-image: url('https://img.freepik.com/free-photo/diverse-hands-touching-white-paper-mockup-pink-wallpaper_53876-96147.jpg?w=1060&t=st=1675783765~exp=1675784365~hmac=2c254c7fdd74415f1c4f6329ed7add60ca2d8af491f8700126f22f941f7e74d5');
   background-size: cover;
-  height: 600px;
   background-position: center;
-  position: relative;
-
+  padding: 20rem 0;
 }
-
-.tracking {
-  animation: tracking 2s cubic-bezier(.215, .61, .355, 1.000) both;
-  font-size: 40px;
-  padding: 20px 0;
+/* .element-animation {
+  opacity: 0;
+  transform: translateY(100%);
 }
-
-@keyframes tracking {
-  0% {
-    letter-spacing: 1em;
-    transform: translateZ(400px);
-    opacity: 0
-  }
-
-  40% {
-    opacity: .6
-  }
-
-  100% {
-    transform: translateZ(0);
-    opacity: 1
-  }
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
 }
-
+.element-animation.element-show {
+  opacity: 1;
+  transition: opacity 1s;
+} */
 .item {
   padding: 20px 0;
 }
@@ -300,26 +372,12 @@ h1 {
   background-color: var(--color-pink);
 }
 
-.project p {
-  padding: 30px 0;
+.project {
+  position: relative;;
 }
-/* .project {
-  columns: 2;
-} */
-/* .project-box {
-  display: flex;
-  flex-direction: row-reverse;
-} */
-/* .project-box img {
-  position: relative;
+
+.project-box img {
+  max-width: 500px;
 }
-.project-box p {
-  position: absolute;
-  z-index: 100;
-} */
-.bg-about {
-  background-image: url('/assets/images/pngegg.png');
-  background-position: center;
-  height: 300px;
-}
+
 </style>

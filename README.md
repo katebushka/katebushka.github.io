@@ -54,3 +54,62 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
     }
    *Подключена ссылка cdn на tailwind в /layouts*
 
+
+
+.project-box {
+ position: relative;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.project-card {
+ overflow: hidden;
+ cursor: pointer;
+}
+.project-card img {
+ width: 100%;
+ transition: .5s;
+}
+.project-box:hover .project-card img {
+ /* transform: rotate(-10deg) scale(1.3); */
+ filter: blur(1px);
+ opacity: .5;
+}
+.blocText {
+ position: absolute;
+ top: 30px;
+ left: 30px;
+ right: 30px;
+ bottom: 30px;
+}
+.project-text {
+ text-transform: uppercase;
+ padding: 0 20px;
+ opacity: 0;
+ transition: .5s;
+}
+.project-text h2 {
+ font-size: 25px;
+}
+.project-text h2 span {
+ color: orange;
+ padding-bottom: 3px;
+}
+.project-text p {
+ position: absolute;
+ top: 180px;
+ width: 250px;
+}
+.project-box:hover .project-text {
+ opacity: 1;
+}
+.blocText::before,
+.blocText::after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ transition: .5s;
+}
