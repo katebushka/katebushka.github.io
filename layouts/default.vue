@@ -1,15 +1,15 @@
 <script setup>
-  // useHead({
-  //   link: [
-  //           { rel: 'icon', href: '/favicon.ico' },
-  //           {
-  //             href: 'https://fonts.googleapis.com/css2?family=Orbitron&display=swap', rel: 'stylesheet'
-  //           },
-  //           {
-  //           href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap", rel: "stylesheet"
-  //           }
-  //         ],
-  // })
+  useHead({
+    link: [
+            { rel: 'icon', href: '/favicon.ico' },
+            {
+              href: 'https://fonts.googleapis.com/css2?family=Orbitron&display=swap', rel: 'stylesheet'
+            },
+            {
+            href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap", rel: "stylesheet"
+            }
+          ],
+  })
 onMounted(function () {
 
   function onEntry(entry) {
@@ -97,5 +97,7 @@ onMounted(function () {
 </div>
 </template>
 
-<style>
+<style lang="css">
+@import '../assets/css/main.css';
+
 </style>

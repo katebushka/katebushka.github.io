@@ -73,4 +73,6 @@ const skills = computed(() => {
   </div>
 </template>
 
-<style></style>
+<style lang="css">
+/* @import '../assets/css/main.css'; */
+</style>

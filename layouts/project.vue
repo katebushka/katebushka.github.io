@@ -1,4 +1,16 @@
 <script setup>
+useHead({
+  link: [
+            { rel: 'icon', href: '/favicon.ico' },
+            {
+              href: 'https://fonts.googleapis.com/css2?family=Orbitron&display=swap', rel: 'stylesheet'
+            },
+            {
+            href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap", rel: "stylesheet"
+            }
+          ],
+
+})
 const route = useRoute();
 </script>
 <template>
@@ -16,7 +28,9 @@ const route = useRoute();
 
 </template>
 
-<style setup>
+<style setup lang="css">
+@import '../assets/css/main.css';
+
 .breadcramb {
   display: flex;
   text-align: start;

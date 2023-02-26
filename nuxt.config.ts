@@ -19,5 +19,10 @@ export default defineNuxtConfig({
           ],
         }
       },
+    //   runtimeConfig: {
+    //     public:{
+    //       url_base: process.env.BASE_URL,
+    //     },
+    // },
     
 });

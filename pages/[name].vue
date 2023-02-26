@@ -39,7 +39,9 @@ const skill = computed(() => {
 });
 
 </script>
-<style scoped>
+<style scoped lang="css">
+/* @import '../assets/css/main.css'; */
+
 @media only screen and (max-width: 600px) {
     .card-box {
         flex-wrap: wrap;
