@@ -15,7 +15,7 @@ const route = useRoute();
 
 </template>
 
-<style setup>
+<style>
 .breadcramb {
   display: flex;
   text-align: start;

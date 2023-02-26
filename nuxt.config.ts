@@ -1,13 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     css: [
-        "/katebushka.github.io/assets/css/main.css"
+        "/assets/css/main.css",
         // '@/assets/css/main.css',
     ],
     app: {
         head: {
-          charset: 'utf-8',
-          viewport: 'width=500, initial-scale=1',
+          // charset: 'utf-8',
+          // viewport: 'width=500, initial-scale=1',
           link: [
             { rel: 'icon', href: '/favicon.ico' },
             {
@@ -20,4 +20,4 @@ export default defineNuxtConfig({
         }
       },
     
-})
+});
