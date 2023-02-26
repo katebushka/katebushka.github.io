@@ -2,6 +2,16 @@
 useHead({
   title: "kB Portfolio"
 })
+const route = useRoute();
+
+const { data: works } = await useFetch(`/api/projects/all`)
+const projects = computed(() => {
+  return works.value;
+});
+const { data: items } = await useFetch(`/api/skills/all`)
+const skills = computed(() => {
+  return items.value;
+});
 </script>
 
 <template>
@@ -18,105 +28,23 @@ useHead({
   <div class="bg-white padding-up padding-down">
     <div class="container slider" id="skills">
       <div class="tracking">Skills.</div>
-      <div class="flex-skill">
-      <p>HTML5</p>
-      <div class="container-skill">
-        <div class="skills html">90%</div>
+      <div v-for="skill in skills" :key="skill" class="flex-skill">
+        <p>{{skill.name}}</p>
+        <div class="container-skill">
+          <div :data-width-line="`${ skill.width }`" class="skills">{{skill.width}}</div>
+        </div>
       </div>
     </div>
-    <div class="flex-skill">
-      <p>CSS3</p>
-      <div class="container-skill">
-        <div class="skills css">80%</div>
-      </div>
-    </div>
-    <div class="flex-skill">
-
-      <p>JavaScript</p>
-      <div class="container-skill">
-        <div class="skills js">65%</div>
-      </div>
-    </div>
-    <div class="flex-skill">
-      <p>Vue</p>
-      <div class="container-skill">
-        <div class="skills vue">60%</div>
-      </div>
-    </div>
-    <div class="flex-skill">
-      <p>GitHub</p>
-      <div class="container-skill">
-        <div class="skills html">90%</div>
-      </div>
-    </div>
-    <div class="flex-skill">
-      <p>Docker</p>
-      <div class="container-skill">
-        <div class="skills css">80%</div>
-      </div>
-    </div>
-    <div class="flex-skill">
-
-      <p>Figma</p>
-      <div class="container-skill">
-        <div class="skills js">65%</div>
-      </div>
-    </div>
-
   </div>
-  </div>
-
   <div class="bg-pink padding-up padding-down">
     <div class="container" id="project">
       <div class="tracking">Project.</div>
       <div class="project">
-        <div class="project-box">
-          <div class="project-card">
-            <img src="~/assets/images/projects/desktop-chat-css.png" alt="project-2">
-            <!-- <div class="blocText">
-                            <div class="project-text">
-                              <h2>Desktop chat. Used CSS, JS</h2>
-                              <p>skills</p>
-                              <NuxtLink to="#">link github</NuxtLink>
-                          </div>
-                          </div> -->
+        <div v-for="project in projects" :key="project" class="project-box">
+          <div class="project-image"><img :src="`${project.img}`" :alt="`${project.title}`"></div>
+          <div class="middle project-text">
+            <NuxtLink :to="`/${project.title}`">{{ project.title }}</NuxtLink>
           </div>
-        </div>
-        <div class="project-box">
-          <!-- <p>Electronics store landing page. Practice course.  Used CSS</p> -->
-          <NuxtLink to="#" target="_blank">
-            <img src="~/assets/images/projects/market-shop-css.png" alt="project-3">
-          </NuxtLink>
-        </div>
-        <div class="project-box">
-          <!-- <p>Project HR services. Used during development: Tailwind, flowbite, docker</p> -->
-          <NuxtLink target="_blank" to="#">
-            <img src="~/assets/images/projects/hr-service-tailwind.png" alt="hr-project">
-          </NuxtLink>
-        </div>
-        <div class="project-box">
-          <!-- <p>Project booking service.Used Bootstrap.</p> -->
-          <NuxtLink to="https://booking.emtza.ru/" target="_blank">
-            <img src="~/assets/images/projects/booking-service-bootstrap.png" alt="booking-project">
-          </NuxtLink>
-        </div>
-        <div class="project-box">
-          <!-- <p>Project statistic information landing page. Used during development: CSS, JS</p> -->
-          <NuxtLink target="_blank" to="#">
-            <img src="~/assets/images/projects/statistic-landing-css.png" alt="stat-project">
-          </NuxtLink>
-        </div>
-        <div class="project-box">
-          <!-- <p>Project real estate service. Used during development: Tailwind, Nuxt 3, JS, API</p> -->
-          <NuxtLink target="_blank" to="https://housedes.ru">
-            <img src="~/assets/images/projects/agency-estate-korean-tailwind.png" alt="estate-project">
-          </NuxtLink>
-        </div>
-        <div class="project-box">
-          <!-- <p>First portfolio. Used Tailwind, Nuxt3, localed</p> -->
-          <NuxtLink target="_blank" to="#">
-            <img src="~/assets/images/projects/first-portfolio-nuxt3.png" alt="project-2">
-          </NuxtLink>
         </div>
       </div>
     </div>
@@ -145,130 +73,4 @@ useHead({
   </div>
 </template>
 
-<style>
-.text.element-show {
-  background: linear-gradient(#FFD063, #FFD063) left no-repeat, rgba(0, 0, 0, .3);
-  background-size: 0% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  animation: change 5s linear forwards;
-}
-
-@keyframes change {
-  100% {
-    background-size: 100% 100%
-  }
-}
-
-.tracking.element-show {
-  animation: tracking 2s cubic-bezier(.215, .61, .355, 1.000) both;
-  font-size: 40px;
-  padding-bottom: 5rem;
-}
-
-@keyframes tracking {
-  0% {
-    letter-spacing: 1em;
-    transform: translateZ(400px);
-    opacity: 0
-  }
-
-  40% {
-    opacity: .6
-  }
-
-  100% {
-    transform: translateZ(0);
-    opacity: 1
-  }
-}
-.flex-skill {
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-}
-.flex-skill p {
-  background-color: var(--color-blue);
-  color: #ddd;
-  line-height: 22px;
-  border-radius: 5px 0 0 5px;
-  padding-left: 10px;
-}
-.container-skill {
-  width: 100%;
-  background-color: #ddd;
-  border-radius: 5px;
-  display: relative;
-  text-align: start;
-}
-
-.skills {
-  text-align: right;
-  padding-right: 20px;
-  line-height: 22px;
-  color: white;
-  background-color: var(--color-blue);
-}
-
-.html.element-show {
-  width: 90%;
-  animation: html5 2s ease-out;
-}
-
-.css.element-show  {
-  width: 80%;
-  animation: css3 2s ease-out;
-}
-
-.js.element-show  {
-  width: 65%;
-  animation: js 2s ease-out;
-}
-
-.vue.element-show  {
-  width: 60%;
-  animation: vue 2s ease-out;
-}
-
-@keyframes html5 {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes css3 {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 80%;
-  }
-}
-
-@keyframes js {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 65%;
-  }
-}
-
-@keyframes vue {
-  0% {
-    width: 0px;
-  }
-
-  100% {
-    width: 60%;
-  }
-}
-</style>
+<style></style>
