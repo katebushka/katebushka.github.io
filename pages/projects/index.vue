@@ -4,6 +4,6 @@
 
 <script setup>
 definePageMeta({
-    layout: 'project'
+    layout: 'project',
 })
 </script>
