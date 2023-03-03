@@ -28,7 +28,7 @@ const route = useRoute();
 
 </template>
 
-<style setup lang="css">
+<style scoped>
 @import '../assets/css/main.css';
 
 .breadcramb {

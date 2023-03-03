@@ -22,7 +22,7 @@
     </nav>
 
 </template>
-<style lang="css">
+<style scoped>
 /* @import '../assets/css/main.css'; */
 
 </style>

@@ -43,7 +43,7 @@ const skills = computed(() => {
         <div v-for="project in projects" :key="project" class="project-box">
           <div class="project-image"><img :src="`${project.img}`" :alt="`${project.title}`"></div>
           <div class="middle project-text">
-            <NuxtLink :to="`/${project.title}`">{{ project.title }}</NuxtLink>
+            <NuxtLink :to="`/projects/${project.title.replaceAll(' ', '_')}`">{{ project.title }}</NuxtLink>
           </div>
         </div>
       </div>
@@ -73,6 +73,6 @@ const skills = computed(() => {
   </div>
 </template>
 
-<style lang="css">
-/* @import '../assets/css/main.css'; */
+<style>
+@import '../assets/css/main.css';
 </style>
