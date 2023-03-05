@@ -32,15 +32,8 @@ function onSkill(entry) {
       change.target.style.width = w
       console.log(w);
       change.target.animate(
-        [
-          { width: '0%' },
-          { width: w }
-        ],
-        {
-          // timing options
-          duration: 2000,
-          iterations: 1,
-        }
+        [{ width: '0%' },{ width: w }],
+        {duration: 2000,iterations: 1,}
       )
     }
   })
@@ -63,23 +56,7 @@ for (let skill of skills) {
   observer1.observe(skill);
 }
 
-
-const myButton = document.getElementById("btn");
-
-window.onscroll = function () {
-  if (window.pageYOffset >= 800) {
-    myButton.style.display = "block";
-  } else {
-    myButton.style.display = "none";
-  }
-};
-
-myButton.onclick = function () {
-  window.scrollTo(0, 0);
-};
-
 });
-
 </script>
 
 <template>
@@ -136,7 +113,6 @@ myButton.onclick = function () {
       <NuxtLink to="mailto:katerbysh@gmail.com" class="btn-email">
         email me
       </NuxtLink>
-
     </div>
   </div>
 </template>
