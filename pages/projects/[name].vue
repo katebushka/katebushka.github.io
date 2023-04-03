@@ -1,37 +1,45 @@
 <script setup>
-definePageMeta({
-    layout: 'project'
-})
 const route = useRoute();
 const { data: work } = await useFetch(`/api/projects/${route.params.name}`)
 const project = computed(() => {
     return work.value;
 });
+
+definePageMeta({
+    layout: 'project',
+    pageTransition: {
+    name: 'slide-right',
+    mode: 'out-in'
+  },
+  middleware (to, from) {
+    to.meta.pageTransition.name = +to.params.id > +from.params.id ? 'slide-left' : 'slide-right'
+  }
+})
 </script>
 
 <template>
     <div class="padding-up">
         <div class="card-box">
             <div class="card-content">
-                <h1>{{ project.title }}</h1>
+                <h2>{{ project.title }}</h2>
                 <img :src="`${project.img}`" alt="">
             </div>
             <div class="card-text">
                 <div><b>front-end</b>: {{ project.skills.css }}, {{ project.skills.js }}</div>
                 <div><b>tools</b>: {{ project.tools }}</div>
                 <div><b>back-end</b>:</div>
+                <NuxtLink class="card-btn" :to="`${project.site}`" target="_blank">Look at this</NuxtLink>
             </div>
         </div>
-        <NuxtLink class="card-btn" :to="`${project.site}`" target="_blank">Look at this</NuxtLink>
+        <div class="footer">
+            <NuxtLink v-if="project.prev" :to="`/projects/${project.prev.replaceAll(' ', '_')}`">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M23 3.5V20l-9-6v6L3 12l11-8v6l9-6.5ZM2 2v20V2Z"/></svg>
+            </NuxtLink>
+            <NuxtLink v-if="project.next" :to="`/projects/${project.next.replaceAll(' ', '_')}`">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M1 3.5V20l9-6v6l11-8l-11-8v6L1 3.5ZM22 2v20V2Z"/></svg>
+            </NuxtLink>
+        </div>
     </div>
-    <div class="footer">
-    <NuxtLink v-if="project.prev" :to="`/projects/${project.prev.replaceAll(' ', '_')}`">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M23 3.5V20l-9-6v6L3 12l11-8v6l9-6.5ZM2 2v20V2Z"/></svg>
-    </NuxtLink>
-    <NuxtLink v-if="project.next" :to="`/projects/${project.next.replaceAll(' ', '_')}`">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M1 3.5V20l9-6v6l11-8l-11-8v6L1 3.5ZM22 2v20V2Z"/></svg>
-    </NuxtLink>
-  </div>
 </template>
 
 <style scoped>
@@ -62,6 +70,7 @@ h2 {
 }
 
 .card-text {
+    display: flex;
     text-align: start;
     flex-direction: column;
     text-transform: uppercase;
@@ -72,6 +81,8 @@ h2 {
     background-color: var(--color-blue);
     color: var(--color-pink);
     border-radius: 5px;
+    margin-top: 5px;
+    text-align: center;
 }
 .card-btn:hover {
     color: #FFD063;
@@ -82,8 +93,30 @@ h2 {
     margin-top: 2rem;
 }
 .footer {
-  padding: 2.5rem 0;
+  padding: 4rem 0;
   display: flex;
   justify-content: space-evenly;
+}
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.2s;
+}
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translate(50px, 0);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translate(-50px, 0);
+}
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translate(-50px, 0);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translate(50px, 0);
 }
 </style>

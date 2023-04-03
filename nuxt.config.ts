@@ -10,7 +10,7 @@ export default defineNuxtConfig({
             {href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap", rel: "stylesheet"}
           ],
         },
-        // pageTransition: { name: "fade", mode: "out-in"},
-        // layoutTransition: { name: "fade", mode: "out-in"},
+        // pageTransition: { name: "slide-right", mode: "out-in"},
+        // layoutTransition: { name: "page", mode: "out-in"},
       }
 });

@@ -3,13 +3,13 @@ export default defineEventHandler((event) => {
         {
             title: 'Booking service',
             img: '/images/projects/booking-service-bootstrap.png',
-            site: 'http://booking.emtza.ru',
+            site: 'http://booking.katebushka.ru',
             skills: {
                 css: 'bootstrap',
                 js: 'javascript',
             },
             tools: 'figma',    
-            prev: '',
+            prev: 'Collage',
             next: 'HR service'
         },
         {
@@ -105,7 +105,7 @@ export default defineEventHandler((event) => {
             },
             tools: 'figma, nuxt3, github, pocketbase, api',
             prev: 'Desctop chat',
-            next: ''
+            next: 'Booking service'
         },
     ]
 

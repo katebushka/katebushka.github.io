@@ -51,18 +51,27 @@
 </template>
 
 <style scoped>
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .menu-mobile{
+    margin-top: 20px;
+    letter-spacing: 5px;
+    width: 100%;
+  }
   .menu-mobile.hide{
   display: none;
-  width: 100%;
 }
 .menu-mobile.show{
   display: block;
-  width: 100%;
-  height: 100vh
 }
 .menu{
   display: none;
+}
+.btn-menu svg{
+  fill: var(--color-blue);
 }
 .btn-menu{
   background-color: transparent;
@@ -74,20 +83,25 @@
 }
 .btn-menu:hover {
   background: #FFD063;
+  border-radius: 10px;
 }
 .menu-mobile-list {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  margin-top: 10px;
   list-style: none;
+  margin: 0 auto;
 }
 .menu-mobile-list > li > a{
-  margin-bottom: 5px;
+  display: block;
+  padding: 10px 5px;
 }
 
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
+  .container {
+    max-width: 1000px;
+  }
 .btn-menu{
   display: none;
 }
@@ -97,6 +111,7 @@
   list-style: none;
 }
 .menu-list > li > a{
+  letter-spacing: 5px;
   margin-right: 2rem;
 }
 .menu-mobile{
@@ -108,7 +123,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
+  margin: 0 auto;
+  padding: 10px;
 }
 .logo {
   font-size: 26px;
