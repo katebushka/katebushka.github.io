@@ -20,7 +20,6 @@ onMounted(function () {
           return letters[Math.floor(Math.random() * 26)].toLowerCase()
         })
         .join("");
-
       if (iteration >= event.target.dataset.value.length) {
         clearInterval(interval);
       }
@@ -81,7 +80,7 @@ onMounted(function () {
   </div>
 </template>
 
-<style scoped>
+<style>
 /* @import '../assets/css/main.css'; */
 
 @media only screen and (min-width: 1200px) {

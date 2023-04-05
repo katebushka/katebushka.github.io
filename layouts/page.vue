@@ -40,4 +40,6 @@ onMounted(function () {
   </div>
 </template>
 
-<style scoped>@import '../assets/css/main.css';</style>
+<style scoped>
+@import '../assets/css/main.css';
+</style>

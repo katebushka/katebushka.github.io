@@ -90,5 +90,5 @@ onMounted(function () {
 </template>
 
 <style>
-@import '../assets/css/main.css';
+/* @import '../assets/css/main.css'; */
 </style>

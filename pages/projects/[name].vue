@@ -43,7 +43,6 @@ definePageMeta({
 </template>
 
 <style scoped>
-@import '../assets/css/main.css';
 /* .bg-project{
   height: 100%;
   margin: 0;

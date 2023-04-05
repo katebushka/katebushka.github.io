@@ -4,7 +4,7 @@
 <template>
   <div>
     <div class="padding-down">
-      <NavBar />
+      <NavBar></NavBar>
     </div>
     <slot></slot>
   <div class="container" id="contact">
