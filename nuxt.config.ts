@@ -1,6 +1,8 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/color-mode'],
-  colorMode: { preference: 'light'},
+  colorMode: {
+    preference: 'light'
+  },
   css: ['assets/css/main.css', ],
   app: {
       head: {
