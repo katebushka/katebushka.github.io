@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 const showMenu = ref(true)
 
-function toggleDarkMode(theme) {
+function toggleDarkMode(theme:string) {
   useColorMode().preference = theme
 }
 
