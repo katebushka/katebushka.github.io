@@ -58,22 +58,4 @@ document.body.addEventListener("pointermove", (e)=>{
   display: flex;
   justify-content: space-evenly;
 } 
-
-.bg-project{
-  height: 100%;
-  margin: 0;
-  --x: calc(var(--posX, 0) * 1px);
-  --y: calc(var(--posY, 0) * 1px);
-  background-image: 
-    linear-gradient(115deg, rgb(242, 220, 228), rgb(1, 58, 76)), 
-    radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(176, 122, 160), rgb(99, 126, 135)), 
-    radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(173, 97, 97)), 
-    radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(0, 221, 255)), 
-    radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(206, 117, 145), rgb(255, 255, 255)), 
-    linear-gradient(60deg, rgb(242, 220, 228), rgb(1, 58, 76));
-  background-blend-mode: overlay, overlay, difference, difference, difference, normal;
-  /* --color-pink: rgb(242, 220, 228);
-  --color-blue: rgb(1, 58, 76); */
-
-}
 </style>

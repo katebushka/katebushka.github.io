@@ -51,6 +51,8 @@ function toggleDarkMode(theme) {
 </template>
 
 <style scoped>
+@import '../assets/css/main.css';
+
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 768px;

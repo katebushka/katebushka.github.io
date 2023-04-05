@@ -24,7 +24,7 @@ definePageMeta({
                 <div><b>front-end</b>: {{ project.skills.css }}, {{ project.skills.js }}</div>
                 <div><b>tools</b>: {{ project.tools }}</div>
                 <div><b>back-end</b>:</div>
-                <NuxtLink class="card-btn bg-project" :to="`${project.site}`" target="_blank">Look at this</NuxtLink>
+                <NuxtLink class="card-btn" :to="`${project.site}`" target="_blank">Look at this</NuxtLink>
             </div>
         </div>
         <div>
@@ -43,7 +43,8 @@ definePageMeta({
 </template>
 
 <style scoped>
-.bg-project{
+@import '../assets/css/main.css';
+/* .bg-project{
   height: 100%;
   margin: 0;
   --x: calc(var(--posX, 0) * 1px);
@@ -56,10 +57,7 @@ definePageMeta({
     radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(206, 117, 145), rgb(255, 255, 255)), 
     linear-gradient(60deg, rgb(242, 220, 228), rgb(248, 251, 252));
   background-blend-mode: overlay, overlay, difference, difference, difference, normal;
-  /* --color-pink: rgb(242, 220, 228);
-  --color-blue: rgb(1, 58, 76); */
-
-}
+} */
 
 @media only screen and (max-width: 600px) {
     .card-box {flex-wrap: wrap;}

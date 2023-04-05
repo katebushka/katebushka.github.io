@@ -25,11 +25,9 @@ onMounted(function () {
         clearInterval(interval);
       }
 
-      iteration += 1 / 2;
-    }, 40);
+      iteration += 1 / 3;
+    }, 30);
   }
-});
-onMounted(function () {
 
   function onEntry(entry) {
     entry.forEach(change => {
@@ -50,8 +48,8 @@ onMounted(function () {
   for (let txt of text) {
     observer.observe(txt);
   }
-});
 
+});
 </script>
 
 <template>
@@ -84,7 +82,7 @@ onMounted(function () {
 </template>
 
 <style scoped>
-@import '../assets/css/main.css';
+/* @import '../assets/css/main.css'; */
 
 @media only screen and (min-width: 1200px) {
 
@@ -100,7 +98,7 @@ onMounted(function () {
     top: 65%;
   }
 .dark-mode .circles{
-  background: url("/images/BiGear2.svg");
+  background: url("/images/gear2.svg");
   height: 120px;
     width: 120px;
     background-size: cover;
@@ -111,7 +109,7 @@ onMounted(function () {
 
 }
 .light-mode .circles{
-  background: url("/images/BiGear.svg");
+  background: url("/images/gear.svg");
   height: 120px;
     width: 120px;
     background-size: cover;
