@@ -1,7 +1,8 @@
 export default defineEventHandler((event) => {
     const projects = [
         {
-            title: 'Booking service',
+            id: 1,
+            title: 'booking service',
             img: '/images/projects/booking-service-bootstrap.png',
             site: 'http://booking.katebushka.ru',
             skills: {
@@ -9,11 +10,12 @@ export default defineEventHandler((event) => {
                 js: 'javascript',
             },
             tools: 'figma',    
-            prev: 'Collage',
-            next: 'HR service'
+            prev: 'photo collage',
+            next: 'hr service'
         },
         {
-            title: 'HR service',
+            id: 2,
+            title: 'hr service',
             img: '/images/projects/hr-service-tailwind.png',
             site: 'http://',
             skills:{
@@ -21,12 +23,13 @@ export default defineEventHandler((event) => {
                 js: 'javascript',
             },
             tools: 'docker',
-            prev: 'Booking service',
-            next: 'Estate agency'
+            prev: 'booking service',
+            next: 'estate agency'
 
         },
         {
-            title: 'Estate agency',
+            id: 3,
+            title: 'estate agency',
             img: '/images/projects/agency-estate-korean-tailwind.png',
             site: 'http://',
             skills: {
@@ -34,12 +37,13 @@ export default defineEventHandler((event) => {
                 js: 'javascript, node.js',    
             },
             tools: 'poketbase, api',
-            prev: 'HR service',
-            next: 'Market shop'
+            prev: 'hr service',
+            next: 'market shop'
 
         },
         {
-            title: 'Market shop',
+            id: 4,
+            title: 'market shop',
             img: '/images/projects/market-shop-css.png',
             site: 'http://',
             skills:{
@@ -48,12 +52,13 @@ export default defineEventHandler((event) => {
     
             },
             tools: 'github, figma',
-            prev: 'Estate agency',
-            next: 'Statistic info'
+            prev: 'estate agency',
+            next: 'statistic info'
 
         },
         {
-            title: 'Statistic info',
+            id: 5,
+            title: 'statistic info',
             img: '/images/projects/statistic-landing-css.png',
             site: 'http://',
             skills:{
@@ -62,12 +67,13 @@ export default defineEventHandler((event) => {
     
             },
             tools: 'github, figma',
-            prev: 'Market shop',
-            next: 'First portfolio'
+            prev: 'market shop',
+            next: 'first portfolio'
 
         },
         {
-            title: 'First portfolio',
+            id: 6,
+            title: 'first portfolio',
             img: '/images/projects/first-portfolio-nuxt3.png',
             site: 'http://',
             skills:{
@@ -76,13 +82,14 @@ export default defineEventHandler((event) => {
     
             },
             tools: 'figma, github',
-            prev: 'Statistic info',
-            next: 'Desctop chat'
+            prev: 'statistic info',
+            next: 'desctop chat'
 
 
         },
         {
-            title: 'Desctop chat',
+            id: 7,
+            title: 'desctop chat',
             img: '/images/projects/desktop-chat-css.png',
             site: 'http://',
             skills:{
@@ -91,12 +98,13 @@ export default defineEventHandler((event) => {
     
             },
             tools: 'figma',
-            prev: 'First portfolio',
-            next: 'Collage'
+            prev: 'first portfolio',
+            next: 'photo collage'
 
         },
         {
-            title: 'Collage',
+            id: 8,
+            title: 'photo collage',
             img: '/images/projects/collage_korea.png',
             site: 'http://housedes.ru',
             skills:{
@@ -104,8 +112,8 @@ export default defineEventHandler((event) => {
                 js: 'javascript, vue3',    
             },
             tools: 'figma, nuxt3, github, pocketbase, api',
-            prev: 'Desctop chat',
-            next: 'Booking service'
+            prev: 'desctop chat',
+            next: 'booking service'
         },
     ]
 

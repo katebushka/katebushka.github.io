@@ -52,3 +52,5 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
     <!-- "postcss": "^8.4.19", -->
     <!-- "tailwindcss": "^3.2.4" -->
     }
+
+`/projects/${project.next.replaceAll(' ', '_')}`
