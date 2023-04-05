@@ -1,5 +1,6 @@
 <script setup>
 const showMenu = ref(true)
+
 function toggleDarkMode(theme) {
   useColorMode().preference = theme
 }
