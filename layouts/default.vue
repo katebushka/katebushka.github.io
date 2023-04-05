@@ -5,7 +5,7 @@
 <template>
   <div>
     <div class="padding-down">
-      <NavBar></NavBar>
+      <nav-bar></nav-bar>
     </div>
     <slot></slot>
   <div class="container" id="contact">
