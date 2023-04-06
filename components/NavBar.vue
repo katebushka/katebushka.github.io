@@ -1,18 +1,18 @@
 <script setup>
 const showMenu = ref(true)
-// let colorMode = useColorMode()
-// function toggleDarkMode(theme) {
-//   useColorMode().preference = theme
-// }
-// const colorMode = useColorMode()
+
+const colorMode = useColorMode()
+console.log(colorMode)
+
 function toggleDarkMode(theme) {
   console.log(theme)
-  useColorMode().preference = theme
+  colorMode.preference = theme
 }
 
 </script>
 
 <template>
+  <div>
   <nav class="box-nav">
     <div class="container navbar">
       <NuxtLink class="logo" to="/">Kate Bush</NuxtLink>
@@ -54,6 +54,7 @@ function toggleDarkMode(theme) {
 
     </div>
   </nav>
+</div>
 </template>
 
 <style>
