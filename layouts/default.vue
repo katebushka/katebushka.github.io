@@ -1,5 +1,5 @@
 <script setup>
-import navbar from '@/components/NavBar.vue'
+// import Navbar from '/components/Navbar.vue.js'
 useHead({
   link: [
       { rel: 'icon', href: '/favicon.ico' },
@@ -11,7 +11,7 @@ useHead({
 
 <template>
   <div>
-      <navbar></navbar>
+      <Navbar></Navbar>
     <slot></slot>
   <div class="container" id="contact">
     <!-- <div class="tracking">Contact.</div> -->
