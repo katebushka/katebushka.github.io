@@ -1,4 +1,5 @@
 <script setup>
+import navbar from '@/components/NavBar.vue'
 useHead({
   link: [
       { rel: 'icon', href: '/favicon.ico' },
@@ -10,7 +11,7 @@ useHead({
 
 <template>
   <div>
-      <nav-bar></nav-bar>
+      <navbar></navbar>
     <slot></slot>
   <div class="container" id="contact">
     <!-- <div class="tracking">Contact.</div> -->
