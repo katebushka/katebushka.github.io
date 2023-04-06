@@ -96,7 +96,7 @@ onMounted(function () {
     right: 22%;
     top: 65%;
   }
-.dark-mode .circles{
+.dark .circles{
   background: url("/images/gear2.svg");
   height: 120px;
     width: 120px;
@@ -107,7 +107,7 @@ onMounted(function () {
     overflow: hidden;
 
 }
-.light-mode .circles{
+.light .circles{
   background: url("/images/gear.svg");
   height: 120px;
     width: 120px;

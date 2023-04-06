@@ -24,13 +24,13 @@ body {
   background-color: var(--color-l-main);
   color: var(--color-main);
 }
-.light-mode body {
+.light body {
   background-color: var(--color-l-main);
   color: var(--color-main);
   background-size: 100%;
 }
 
-.dark-mode body {
+.dark body {
   background-color: var(--color-main);
   color: var(--color-l-main);
   background-size: contain;
@@ -157,10 +157,10 @@ nav {
   .project-text {
     font-size: 26px;
   }
-  .light-mode .hero-title:hover{
+  .light .hero-title:hover{
     color: var(--color-main);
   }
-  .dark-mode .hero-title:hover{
+  .dark .hero-title:hover{
     color: var(--color-l-main);
   }
 
@@ -242,20 +242,20 @@ nav {
   width: 40px;
   border-radius: 50%;
 }
-.light-mode .item svg{
+.light .item svg{
   fill: var(--color-main);
 }
-.dark-mode .item svg{
+.dark .item svg{
   fill: var(--color-l-main);
 }
 .btn-email {
   padding: 10px 20px;
   border-radius: 10px;
 }
-.light-mode .btn-email {
+.light .btn-email {
   border: 1px solid var(--color-main);
 }
-.dark-mode .btn-email {
+.dark .btn-email {
   border: 1px solid var(--color-l-main);
 }
 
@@ -273,7 +273,7 @@ nav {
 
 } */
 
-.light-mode .text.element-show {
+.light .text.element-show {
     background: linear-gradient(var(--color-main), var(--color-main)) left no-repeat, var(--yellow) ;
     background-size: 0% 100%;
     -webkit-background-clip: text;
@@ -282,7 +282,7 @@ nav {
     color: transparent;
     animation: change 5s linear forwards;
   }
-  .dark-mode .text.element-show {
+  .dark .text.element-show {
     background: linear-gradient(var(--color-l-main), var(--color-l-main)) left no-repeat, var(--yellow) ;
     background-size: 0% 100%;
     -webkit-background-clip: text;
@@ -329,12 +329,12 @@ nav {
     padding-left: 10px;
     text-transform: uppercase;
   }
-  .light-mode .flex-skill p{
+  .light .flex-skill p{
     background-color: var(--color-main);
     color: #fff;
 
   }
-  .dark-mode .flex-skill p{
+  .dark .flex-skill p{
     background-color: var(--yellow);
     color: var(--color-main);
   }
@@ -353,12 +353,12 @@ nav {
     line-height: 22px;
     background-color: var(--color-main);
   }
-  .light-mode .skills {
+  .light .skills {
     background-color: var(--color-main);
     color: #fff;
 
   }
-  .dark-mode .skills {
+  .dark .skills {
     background-color: var(--yellow);
     color: var(--color-main);
 

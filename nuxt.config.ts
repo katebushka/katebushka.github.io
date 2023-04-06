@@ -1,10 +1,5 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/color-mode'],
-  ssr: true,
-  // colorMode: {
-  //   classSuffix: '-mode',
-  //   preference: 'light',
-  // },
   css: ['assets/css/main.css', ],
   app: {
       head: {
@@ -16,5 +11,8 @@ export default defineNuxtConfig({
           {href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap", rel: "stylesheet"}
         ],
       },
-    }
-});
+    },
+    colorMode: {
+      classSuffix: '',
+    },
+  });
