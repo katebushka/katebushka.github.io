@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  ssr: false,
   css: ['assets/css/main.css', ],
   modules: ['@nuxtjs/color-mode'],
   // app: {
@@ -14,6 +15,7 @@ export default defineNuxtConfig({
     // },
     colorMode: {
       preference: 'light',
+      fallback: 'dark',
       classSuffix: '',
     },
   });
