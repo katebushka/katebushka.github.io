@@ -1,10 +1,10 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/color-mode'],
   ssr: true,
-  colorMode: {
-    classSuffix: '-mode',
-    preference: 'light',
-  },
+  // colorMode: {
+  //   classSuffix: '-mode',
+  //   preference: 'light',
+  // },
   css: ['assets/css/main.css', ],
   app: {
       head: {
