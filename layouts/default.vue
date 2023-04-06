@@ -1,5 +1,4 @@
 <script setup>
-// import Navbar from '/components/Navbar.vue.js'
 useHead({
   link: [
       { rel: 'icon', href: '/favicon.ico' },

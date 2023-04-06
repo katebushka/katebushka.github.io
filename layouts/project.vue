@@ -29,7 +29,7 @@ document.body.addEventListener("pointermove", (e)=>{
 </script>
 <template>
   <div>
-    <nav-bar></nav-bar>
+    <Navbar></Navbar>
     <div class="container">
       <NuxtLoadingIndicator />
       <!-- <div> -->
