@@ -1,32 +1,32 @@
 <script setup>
 onMounted(function () {
-  // const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  // let interval = null;
+  let interval = null;
 
-  // document.querySelector(".hero-title").onmouseover = event => {
-  //   let iteration = 0;
+  document.querySelector(".hero-title").onmouseover = event => {
+    let iteration = 0;
 
-  //   clearInterval(interval);
+    clearInterval(interval);
 
-  //   interval = setInterval(() => {
-  //     event.target.innerText = event.target.innerText
-  //       .split("")
-  //       .map((letter, index) => {
-  //         if (index < iteration) {
-  //           return event.target.dataset.value[index];
-  //         }
+    interval = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iteration) {
+            return event.target.dataset.value[index];
+          }
 
-  //         return letters[Math.floor(Math.random() * 26)].toLowerCase()
-  //       })
-  //       .join("");
-  //     if (iteration >= event.target.dataset.value.length) {
-  //       clearInterval(interval);
-  //     }
+          return letters[Math.floor(Math.random() * 26)].toLowerCase()
+        })
+        .join("");
+      if (iteration >= event.target.dataset.value.length) {
+        clearInterval(interval);
+      }
 
-  //     iteration += 1 / 3;
-  //   }, 30);
-  // }
+      iteration += 1 / 3;
+    }, 30);
+  }
 
   function onEntry(entry) {
     entry.forEach(change => {
