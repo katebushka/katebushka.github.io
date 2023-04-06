@@ -3,7 +3,6 @@ const showMenu = ref(true)
 
 const colorMode = useColorMode()
 console.log(colorMode)
-
 function toggleDarkMode(theme) {
   console.log(theme)
   colorMode.preference = theme
