@@ -1,4 +1,12 @@
 <script setup>
+useHead({
+  link: [
+      { rel: 'icon', href: '/favicon.ico' },
+      { href: 'https://fonts.googleapis.com/css2?family=Orbitron&display=swap', rel: 'stylesheet'},
+      {href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap", rel: "stylesheet"}
+        ],
+})
+
 onMounted(function () {
   const myButton = document.getElementById("btn-arrow");
 
@@ -17,9 +25,10 @@ onMounted(function () {
 
 <template>
   <div>
-    <div class="container">
+    <nav-bar></nav-bar>
+    <!-- <div class="container"> -->
       <NuxtLoadingIndicator />
-      <div>
+      <!-- <div>
         <NuxtLink class="breadcramb" to="/">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
             <path fill="currentColor"
@@ -27,8 +36,8 @@ onMounted(function () {
           </svg>
           <div>Home</div>
         </NuxtLink>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
     <slot></slot>
     <div id="btn-arrow" class="arrow-up">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">

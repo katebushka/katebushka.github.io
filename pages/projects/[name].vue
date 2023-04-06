@@ -14,7 +14,7 @@ definePageMeta({
 </script>
 
 <template>
-    <div class="padding-up" :project="project">
+    <div class="page" :project="project">
         <div class="card-box">
             <div class="card-content">
                 <h2>{{ project.title }}</h2>
