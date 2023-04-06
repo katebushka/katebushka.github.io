@@ -12,8 +12,7 @@ function toggleDarkMode(theme) {
 </script>
 
 <template>
-  <div>
-  <nav class="box-nav">
+  <div class="box-nav">
     <div class="container navbar">
       <NuxtLink class="logo" to="/">Kate Bush</NuxtLink>
       <button class="btn-menu" @click="showMenu = !showMenu" :class="showMenu ? 'hide' : 'show'" type="button">
@@ -53,11 +52,10 @@ function toggleDarkMode(theme) {
       </div>
 
     </div>
-  </nav>
-</div>
+  </div>
 </template>
 
-<style>
+<style scoped>
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 768px;

@@ -54,7 +54,7 @@ onMounted(function () {
 <template>
   <div>
     <Title>kB Portfolio</Title>
-    <div class="block">
+    <div class="block padding-up">
       <h1 class="hero-title" data-value="frontend_developer">frontend_developer</h1>
       <div>
         <div class="container padding-up padding-down" id="about">

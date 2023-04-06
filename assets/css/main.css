@@ -12,8 +12,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-body {
   scrollbar-width: none;
   line-height: 20px;
   word-spacing: 5px;
@@ -21,8 +19,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: var(--font-roboto);
-  background-color: var(--color-l-main);
-  color: var(--color-main);
+
 }
 .light body {
   background-color: var(--color-l-main);
@@ -47,7 +44,7 @@ a {
   color: currentColor;
 }
 
-nav {
+.box-nav {
   font-family: var(--font-palatino);
   font-weight: 700;
   padding: 2rem;
