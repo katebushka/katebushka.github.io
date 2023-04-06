@@ -1,7 +1,7 @@
 <script setup>
-// definePageMeta({
-//   layout: 'page',
-// })
+definePageMeta({
+  layout: 'page',
+})
 const route = useRoute();
 const { data: works } = await useFetch(`/api/projects/all`)
 const projects = computed(() => {
