@@ -7,4 +7,7 @@ export default defineNuxtConfig({
     fallback: 'dark',
     classSuffix: '',
   },
+  nitro: {
+    preset: 'vercel',
+  },
   });
