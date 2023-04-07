@@ -17,19 +17,10 @@ useHead({
       {href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap", rel: "stylesheet"}
         ],
 })
-onMounted(function(){
-document.body.addEventListener("pointermove", (e)=>{
-  const { currentTarget: el, clientX: x, clientY: y } = e;
-  const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
-  el.style.setProperty('--posX',  x-l-w/2);
-  el.style.setProperty('--posY',  y-t-h/2);
-})
-})
-
 </script>
 <template>
-  <div>
-    <Navbar></Navbar>
+  <div class="bg-project">
+    <navbar-component></navbar-component>
     <div class="container">
       <NuxtLoadingIndicator />
       <!-- <div> -->
@@ -40,7 +31,7 @@ document.body.addEventListener("pointermove", (e)=>{
       <!-- </div> -->
       <!-- <slot :next="next" :prev="prev"></slot> -->
       <slot></slot>
-      <div class="footer">
+      <div class="footer-arrow">
           <NuxtLink  :to="project.prev.replaceAll(' ', '_')">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M23 3.5V20l-9-6v6L3 12l11-8v6l9-6.5ZM2 2v20V2Z"/></svg>
           </NuxtLink>
@@ -54,7 +45,7 @@ document.body.addEventListener("pointermove", (e)=>{
 
 <style scoped>
  @import '../assets/css/main.css'; 
- .footer {
+ .footer-arrow {
   padding: 4rem 0;
   display: flex;
   justify-content: space-evenly;

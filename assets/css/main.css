@@ -99,6 +99,20 @@ a {
   font-size: 30px;
   padding-bottom: 5rem;
 }
+.item {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.padding-up {
+  padding-top: 3rem;
+}
+.padding-down {
+  padding-bottom: 3rem;
+}
+
 }
 /*  */
 @media only screen and (min-width: 600px) {
@@ -126,7 +140,19 @@ a {
     font-size: 40px;
     padding-bottom: 5rem;
   }
-
+  .item {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .padding-up {
+    padding-top: 7rem;
+  }
+  .padding-down {
+    padding-bottom: 7rem;
+  }
+  
 }
 /*  */
 @media only screen and (min-width: 992px) {
@@ -212,12 +238,6 @@ a {
   text-shadow: 1px 1px 2px var(--yellow);
 }
 /*  */
-.padding-up {
-  padding-top: 7rem;
-}
-.padding-down {
-  padding-bottom: 7rem;
-}
 
 .hero {
   background-image: url('/images/hero/hero.avif');
@@ -244,16 +264,6 @@ a {
 }
 .dark .item svg{
   fill: var(--color-l-main);
-}
-.btn-email {
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-.light .btn-email {
-  border: 1px solid var(--color-main);
-}
-.dark .btn-email {
-  border: 1px solid var(--color-l-main);
 }
 
 /* .item svg:hover {
@@ -382,5 +392,12 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .bg-project{
+    background-image: url('/images/hero/3.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    background-position: right;
   }
   

@@ -1,7 +1,4 @@
 <script setup>
-definePageMeta({
-  layout: 'page',
-})
 const route = useRoute();
 const { data: works } = await useFetch(`/api/projects/all`)
 const projects = computed(() => {
@@ -89,6 +86,6 @@ onMounted(function () {
   </div>
 </template>
 
-<style>
-/* @import '../assets/css/main.css'; */
+<style scoped>
+
 </style>
