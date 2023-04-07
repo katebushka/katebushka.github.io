@@ -25,7 +25,7 @@ onMounted(function () {
 
 <template>
   <div>
-    <Navbar></Navbar>
+    <navbar-component></navbar-component>
     <!-- <div class="container"> -->
       <NuxtLoadingIndicator />
       <!-- <div>

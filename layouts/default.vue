@@ -10,7 +10,7 @@ useHead({
 
 <template>
   <div>
-      <Navbar></Navbar>
+      <navbar-component></navbar-component>
     <slot></slot>
   <div class="container" id="contact">
     <!-- <div class="tracking">Contact.</div> -->
