@@ -31,14 +31,14 @@ useHead({
       <!-- </div> -->
       <!-- <slot :next="next" :prev="prev"></slot> -->
       <slot></slot>
-      <div class="footer-arrow">
+      <!-- <div class="footer-arrow">
           <NuxtLink  :to="project.prev.replaceAll(' ', '_')">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M23 3.5V20l-9-6v6L3 12l11-8v6l9-6.5ZM2 2v20V2Z"/></svg>
           </NuxtLink>
           <NuxtLink :to="project.next.replaceAll(' ', '_')">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M1 3.5V20l9-6v6l11-8l-11-8v6L1 3.5ZM22 2v20V2Z"/></svg>
           </NuxtLink>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

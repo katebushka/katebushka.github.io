@@ -14,7 +14,7 @@ definePageMeta({
 </script>
 
 <template>
-    <div class="page" :project="project">
+    <div class="page">
         <div class="card-box">
             <div class="card-content">
                 <h2>{{ project.title }}</h2>
@@ -27,17 +27,15 @@ definePageMeta({
                 <NuxtLink class="card-btn" :to="`${project.site}`" target="_blank">Visit</NuxtLink>
             </div>
         </div>
-        <div>
-            <h2 class="page">{{ project.id }}</h2>
-        </div>
-        <!-- <div class="footer ">
+        <div class="footer ">
           <NuxtLink v-if="project.prev" :to="`/projects/${project.prev.replaceAll(' ', '_')}`">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M23 3.5V20l-9-6v6L3 12l11-8v6l9-6.5ZM2 2v20V2Z"/></svg>
           </NuxtLink>
+            <div class="page"><h2>{{ project.id }}</h2></div>
           <NuxtLink v-if="project.next" :to="`/projects/${project.next.replaceAll(' ', '_')}`">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M1 3.5V20l9-6v6l11-8l-11-8v6L1 3.5ZM22 2v20V2Z"/></svg>
           </NuxtLink>
-      </div> -->
+      </div>
 
     </div>
 </template>
@@ -62,6 +60,7 @@ definePageMeta({
 }
 
 .card-box {
+    height: 80%;
     display: flex;
     align-items: center;
 }
@@ -85,21 +84,23 @@ h2 {
 }
 .card-btn {
     padding: 10px 0;
-    background-color: var(--color-main);
-    color: var(--color-l-main);
+    background-color: var(--yellow);
+    color: var(--color-main);
     border-radius: 5px;
     margin-top: 5px;
     text-align: center;
 }
-.card-btn:hover {
+/* .card-btn:hover {
     color: var(--yellow);
     transition: 500ms;
 
-}
+} */
 .footer {
-  padding: 4rem 0;
+    height: 20%;
+  padding-top: 4rem;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 .page {
     padding-top: 20px;

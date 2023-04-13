@@ -105,13 +105,13 @@ export default defineEventHandler((event) => {
         {
             id: 8,
             title: 'photo collage',
-            img: '/images/projects/collage_korea.png',
+            img: '/images/projects/collage_korea2.png',
             site: 'http://housedes.ru',
             skills:{
                 css: 'tailwind',
                 js: 'javascript, vue3',    
             },
-            tools: 'figma, nuxt3, github, pocketbase, api',
+            tools: 'figma, nuxt3, pocketbase, api',
             prev: 'desctop chat',
             next: 'booking service'
         },
