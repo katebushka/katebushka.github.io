@@ -2,45 +2,62 @@ export default defineEventHandler((event) => {
     const skills = [
         {
             name: 'html5',
-            width: '65%'
+            width: '90%'
         },
         {
             name: 'css3',
-            width: '55%'
+            width: '85%'
+        },
+        {
+            name: 'sass',
+            width: '30%'
+        },
+        {
+            name: 'tailwindcss',
+            width: '80%'
+        },
+        {
+            name: 'bootstrap',
+            width: '50%'
         },
         {
             name: 'js',
-            width: '25%'
+            width: '35%'
 
         },
         {
             name: 'vue3',
-            width: '10%'
+            width: '15%'
+
+        },
+        {
+            name: 'nuxt3',
+            width: '15%'
 
         },
         {
             name: 'github',
-            width: '50%'
+            width: '60%'
 
         },
         {
             name: 'docker',
-            width: '5%'
+            width: '10%'
 
         },
         {
             name: 'figma',
-            width: '65%'
+            width: '75%'
 
         },
         {
             name: 'node.js',
-            width: '5%'
+            width: '10%'
 
         },
         {
             name: 'wordpress',
-            width: '30%'
+            width: '25%'
 
         },
 

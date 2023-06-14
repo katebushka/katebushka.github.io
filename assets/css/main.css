@@ -5,9 +5,9 @@
 :root {
   --font-roboto: 'Roboto Mono', monospace;
   --font-palatino: 'Orbitron', sans-serif;
-  --color-l-main: #fff1dd;
-  --color-main: #013a4c;
-  --yellow: #FFD063;
+  --color-l-main: #f4f7fc;
+  --color-main: #283347;
+  --yellow: #8fa4c3;
 }
 
 html {
@@ -42,6 +42,7 @@ body::-webkit-scrollbar {
 a {
   text-decoration: none;
   color: currentColor;
+  cursor: pointer;
 }
 
 .box-nav {
@@ -100,7 +101,6 @@ a {
   padding-bottom: 5rem;
 }
 .item {
-  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +141,7 @@ a {
     padding-bottom: 5rem;
   }
   .item {
-    padding: 20px 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,7 +246,6 @@ a {
   padding: 20rem 0;
 }
 .item {
-  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,10 +393,11 @@ a {
     align-items: center;
   }
   .bg-project{
-    background-image: url('/images/hero/3.png');
+    background-image: url('/images/hero/ray.png');
     background-repeat: no-repeat;
     background-size: 50%;
     background-attachment: fixed;
-    background-position: right;
+    /* background-position: right; */
+    height: 100%;
   }
   
